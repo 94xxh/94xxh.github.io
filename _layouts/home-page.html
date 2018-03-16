@@ -3,10 +3,12 @@ layout: default
 ---
 <div class="flex-container">
   {% include header.html %}
-  <div class="content wrapper">
-    {{ content }}
-  {% include search.html %}
-  {% include pagination.html %}
-  </div> <!-- End Wrapper -->
+  <div style="width: 100%; height: auto; background-color: #efdcdc;">
+      <div class="content wrapper">
+        {{ content }}
+        {% include search.html %}
+        {% include pagination.html %}
+        </div> <!-- End Wrapper -->
+  </div>
   {% include footer.html %}
 </div>
