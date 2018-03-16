@@ -3,6 +3,7 @@ layout: default
 ---
 <div class="flex-container">
   {% include header.html %}
+  <canvas></canvas>
   <article class="article-page">
     <div class="page-image">
       <div class="cover-image" style="background: url({{"/assets/img/" | prepend: site.baseurl | append : page.img}}) center no-repeat; background-size: cover;"></div>
@@ -37,7 +38,6 @@ layout: default
   {% include search.html %}
   {% include footer.html %}
 </div>
-<canvas></canvas>
 <script>
   var c = document.getElementsByTagName('canvas')[0];
 if (!c.getContext) alert('Your browser is too old now!Change to chrome ok？');
