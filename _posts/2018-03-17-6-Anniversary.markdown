@@ -57,23 +57,35 @@ musicUrl: http://mp3.qqmusic.cc/yq/213212911.mp3
 因为慢慢是个最好的原因  
 书里总爱写到喜出望外的傍晚  
 
-###好听吗~是不是想象着我们幸福的生活？####
+###好听吗~是不是想象着我们幸福的生活?###
+
+
 
 >去想去的地方
     *钢铁直男的我没找到好看的旅游照！ 惊不惊喜？意不意外？ 哈哈哈哈~~  =͟͟͞͞c⌒っ'ω')っ *
+
+
 
 >吃喜欢的美食
 ![six Anniversary]({{site.baseurl}}/assets/img/sixAnniversary2.jpg)
 ![six Anniversary]({{site.baseurl}}/assets/img/sixAnniversary3.jpg)
 ![six Anniversary]({{site.baseurl}}/assets/img/sixAnniversary4.jpg)
 
+
+
 >做想做的事
     *做想 ‘做’ 的事~~  -(￢∀￢)σ*
+
+
 
 >遇见美好的事物
 ![six Anniversary]({{site.baseurl}}/assets/img/yosh-ginsu.jpg)
 
-> **而我能想到最浪漫的事，就是**
+
+#BUT#
+
+
+> **ლ(╹◡╹ლ) 我能想到最浪漫的事，就是**
 
 ![six Anniversary]({{site.baseurl}}/assets/img/sixAnniversary1.jpg)
 
