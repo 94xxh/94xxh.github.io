@@ -6,7 +6,7 @@ description: 六周年纪念 # Add post description (optional)
 img: post-5.jpg # Add image post (optional)
 tags: [Love, 6 Anniversary]
 author: 爱Tyn的大熊 # Add name author (optional)
-musicUrl: http://mp3.qqmusic.cc/yq/107211946.mp3
+musicUrl: http://mp3.qqmusic.cc/yq/213212911.mp3
 ---
 谨以此文纪念六周年！
 
@@ -15,7 +15,8 @@ musicUrl: http://mp3.qqmusic.cc/yq/107211946.mp3
 ![six Anniversary]({{site.baseurl}}/assets/img/sixAnniversary2.jpg)
 ![six Anniversary]({{site.baseurl}}/assets/img/sixAnniversary3.jpg)
 ![six Anniversary]({{site.baseurl}}/assets/img/sixAnniversary4.jpg)
-> 我能想到最浪漫的事
+> **我能想到最浪漫的事，就是**
+
 ![six Anniversary]({{site.baseurl}}/assets/img/sixAnniversary1.jpg)
 
 
