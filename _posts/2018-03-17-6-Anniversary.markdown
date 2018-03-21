@@ -79,6 +79,7 @@ musicUrl: http://mp3.qqmusic.cc/yq/213212911.mp3
 
 
 >遇见美好的事物
+    *快给我照片呀！ (ﾉ*・ω・)ﾉ*
 ![six Anniversary]({{site.baseurl}}/assets/img/yosh-ginsu.jpg)
 
 
