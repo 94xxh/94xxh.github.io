@@ -11,6 +11,11 @@ author: 爱Tyn的大熊 # Add name author (optional)
 
 > 待补充
 
-![Yosh Ginsu]({{site.baseurl}}/assets/img/yosh-ginsu.jpg)
+![six Anniversary]({{site.baseurl}}/assets/img/sixAnniversary1.jpg)
+![six Anniversary]({{site.baseurl}}/assets/img/sixAnniversary2.jpg)
+![six Anniversary]({{site.baseurl}}/assets/img/sixAnniversary3.jpg)
+![six Anniversary]({{site.baseurl}}/assets/img/sixAnniversary4.jpg)
+
+
 
 
