@@ -68,10 +68,19 @@ musicUrl: http://mp3.qqmusic.cc/yq/213212911.mp3
 
 
 >吃喜欢的美食
+**我做的！**
 
 ![six Anniversary]({{site.baseurl}}/assets/img/sixAnniversary2.jpg)
+
+**我做的！**
+
 ![six Anniversary]({{site.baseurl}}/assets/img/sixAnniversary3.jpg)
+
+**还是我做的！(ˉ▽￣～)**
+
 ![six Anniversary]({{site.baseurl}}/assets/img/sixAnniversary4.jpg)
+
+**简直优秀的不行！ʅ（´◔౪◔）ʃ**
 
 
 
