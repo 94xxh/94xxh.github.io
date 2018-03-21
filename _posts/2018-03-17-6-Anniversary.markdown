@@ -6,7 +6,7 @@ description: 六周年纪念 # Add post description (optional)
 img: post-5.jpg # Add image post (optional)
 tags: [Love, 6 Anniversary]
 author: 爱Tyn的大熊 # Add name author (optional)
-musicUrl: http://mp3.qqmusic.cc/yq/212447875.mp3
+musicUrl: http://mp3.qqmusic.cc/yq/107211946.mp3
 ---
 谨以此文纪念六周年！
 
