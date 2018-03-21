@@ -4,7 +4,7 @@ layout: default
 <div class="flex-container">
   <!-- 背景音乐 -->
   {% if page.musicUrl %}
-        <audio style="display:none" autoplay="autoplay" src="{{page.musicUrl}}"></audio>
+        <audio style="display:none" autoplay="autoplay" loop="loop" src="{{page.musicUrl}}"></audio>
   {% else %}
     <!-- <li class="email"><a href="mailto:example.adam@blog.com"><i class="fa fa-envelope-o" aria-hidden="true"></i></a></li> -->
   {% endif %}
