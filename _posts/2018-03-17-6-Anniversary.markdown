@@ -8,7 +8,7 @@ tags: [Love, 6 Anniversary]
 author: 爱Tyn的大熊 # Add name author (optional)
 musicUrl: http://mp3.qqmusic.cc/yq/213212911.mp3
 ---
-谨以此文纪念六周年！
+**亲爱的**，六周年快乐！
 
 > 待补充
 
