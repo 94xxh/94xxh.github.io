@@ -124,9 +124,9 @@
                 audio.play();
                 document.addEventListener("WeixinJSBridgeReady", function () {
                     // loading结束后自动播放
+                    audio.play();
                     setTimeout(function(){
                         alert(1212);
-                        audio.play();
                     },1500)
                 }, false);
             })();
