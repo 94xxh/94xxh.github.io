@@ -1,0 +1,124 @@
+<html lang="en">
+<head>
+    <title>我怀疑你脑里住了一个人</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
+    <link rel="stylesheet" href="./css/style.css?v=1.2">
+</head>
+<body>
+    <audio id="x-bgmusic" style="display: none" src="http://www.170mv.com/kw/other.web.nf01.sycdn.kuwo.cn/resource/n3/76/61/1987023712.mp3"></audio>
+    <!-- loading -->
+    <div class="x-loading">
+        <!-- tit -->
+        <div class="x-loading-tit"></div>
+        <!-- pinkbrain -->
+        <div class="x-loading-brain"></div>
+        <div class="x-loading-people"></div>
+        <!-- loading number -->
+        <div class="x-loading-number">
+            <p>100%</p>
+        </div>
+    </div>
+    <!-- 眨眼效果 -->
+    <div class="x-eyes"></div>
+    <!-- 文字 -->
+    <div class="x-subtitles">
+        <p class="x-subtitles-first">这不是我吗？</p>
+        <p class="x-subtitles-last">欢迎进入你的大脑</p>
+    </div>
+    <!-- 首页main -->
+    <div class="x-main">
+        <!-- star -->
+        <div class="x-main-bgstar"></div>
+        <!-- musicplay -->
+        <div class="x-main-music-play"></div>
+        <!-- lineroad -->
+        <div class="x-main-lineroad"></div>
+        <!-- tit -->
+        <div class="x-main-tit"></div>
+        <!-- 被发现 -->
+        <div class="x-main-subtit"></div>
+        <!-- 悬浮元素 -->
+        <div class="x-main-floatElement"></div>
+        <!-- 手指 箭头 -->
+        <div class="x-main-fingerArrow"></div>
+        <!-- instruction -->
+        <div class="x-main-btn-instruction"></div>
+        <!-- people -->
+        <div class="x-main-people"></div>
+    </div>
+    <!-- 活动介绍 -->
+    <div class="x-instruction">
+        <div class="x-instruction-content"></div>
+        <div class="x-instruction-close"></div>
+    </div>
+    <script src="./js/jquery.js"></script>
+    <script>
+        // 活动介绍 弹出 关闭
+        console.log( $('.x-main-btn-instruction'));
+        //end
+        (function(){
+            // 加载百分数
+            let i = 0;
+            setInterval(function(){
+                if (i<100){
+                    i++;
+                    $('.x-loading-number p').text(i+'%');
+                }
+            },15);
+            // 规则 弹窗 和隐藏
+            $('.x-main').on('click', '.x-main-btn-instruction', function(){
+                $('.x-instruction').fadeIn();
+                // 禁止滚动
+                $('body').css('overflow',"hidden");
+            });
+            $('.x-instruction').on('click', '.x-instruction-close', function(){
+                $('.x-instruction').fadeOut();
+                $('body').css('overflow',"auto");
+            });
+            // playmusic
+            var audio=document.getElementById('x-bgmusic');
+            $('.x-main').on('click', '.x-main-music-play', function(){
+                if (audio.paused){
+                    audio.play();
+                } else {
+                    audio.pause();
+                }
+            })
+            $('.x-eyes').on('click', function(){
+                audio.play();
+            })
+            // end
+            setTimeout(function(){
+                $('.x-loading').fadeOut()
+                // 开始眨眼动画 音频完毕 关闭眨眼
+                $('.x-eyes').addClass('x-eyesAmi');
+                // 标题抖动
+                $('.x-main-tit').addClass('x-main-titAmi');
+                // 播放音乐
+                // audio.play();
+            },1500)
+            setInterval(function(){
+                console.log(audio.currentTime);//播放进度
+                if (audio.currentTime < 5.1 && audio.currentTime > 5) {
+                    // 出现字幕
+                    $('.x-subtitles-first').show();
+                } else if (audio.currentTime < 7.1 && audio.currentTime > 7) {
+                    $('.x-subtitles-first').hide();
+                    // 眨眼关闭
+                    $('.x-eyes').hide();
+                }
+                
+            },100)
+            setTimeout(function () {
+                // 模拟音频完毕 关闭眨眼
+                $('.x-eyes').removeClass('x-eyesAmi');
+                // 停止音乐
+                document.getElementById('x-bgmusic').pause();
+                // 出现字母
+            }, 70000)
+        })($);
+    </script>
+</body>
+</html>
