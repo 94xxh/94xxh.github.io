@@ -97,16 +97,20 @@
                 // 标题抖动
                 $('.x-main-tit').addClass('x-main-titAmi');
             },1500)
+            // 循环查询音乐时间 更新字幕
             setInterval(function(){
                 if (audio.currentTime < 5 && audio.currentTime > 3) {
-                    // 出现字幕
+                    // 出现字幕1
                     $('.x-subtitles-first').show();
-                } else if (audio.currentTime < 10 && audio.currentTime > 7) {
+                } else if (audio.currentTime < 10 && audio.currentTime > 5) {
+                    // 出现字幕2
                     $('.x-subtitles-first').hide();
-                    // 眨眼关闭
+                    $('.x-subtitles-last').show();
+                } else if (audio.currentTime < 15 && audio.currentTime > 12){
+                    $('.x-subtitles-last').hide();
+                    // 字幕，眨眼关闭
                     $('.x-eyes').hide();
                 }
-                
             },100)
             setTimeout(function () {
                 // 模拟音频完毕 关闭眨眼
