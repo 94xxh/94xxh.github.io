@@ -438,7 +438,13 @@
     line-height: .416667rem;
     color: white;
     text-align: center;
+    padding: .185185rem;
     display: none;
+}
+.x-subtitles-last{
+    width: 4.166667rem!important;
+    border: 1px white solid;
+    margin: 0 auto;
 }
 .x-show{
     display: block!important;
