@@ -98,11 +98,10 @@
                 $('.x-main-tit').addClass('x-main-titAmi');
             },1500)
             setInterval(function(){
-                console.log(audio.currentTime);
-                if (audio.currentTime < 5.1 && audio.currentTime > 5) {
+                if (audio.currentTime < 5 && audio.currentTime > 3) {
                     // 出现字幕
                     $('.x-subtitles-first').show();
-                } else if (audio.currentTime < 7.1 && audio.currentTime > 7) {
+                } else if (audio.currentTime < 10 && audio.currentTime > 7) {
                     $('.x-subtitles-first').hide();
                     // 眨眼关闭
                     $('.x-eyes').hide();
