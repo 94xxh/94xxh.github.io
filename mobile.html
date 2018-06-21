@@ -96,8 +96,6 @@
                 $('.x-eyes').addClass('x-eyesAmi');
                 // 标题抖动
                 $('.x-main-tit').addClass('x-main-titAmi');
-                // 播放音乐
-                audio.play();
             },1500)
             setInterval(function(){
                 if (audio.currentTime < 5.1 && audio.currentTime > 5) {
@@ -126,9 +124,10 @@
                 audio.play();
                 document.addEventListener("WeixinJSBridgeReady", function () {
                     // loading结束后自动播放
-                    setTimeout(function(){
-                        audio.play();
-                    },1500)
+                    audio.play();
+//                     setTimeout(function(){
+//                         audio.play();
+//                     },1500)
                 }, false);
             })();
         });
