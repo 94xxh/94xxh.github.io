@@ -98,6 +98,7 @@
                 $('.x-main-tit').addClass('x-main-titAmi');
             },1500)
             setInterval(function(){
+                console.log(audio.currentTime);
                 if (audio.currentTime < 5.1 && audio.currentTime > 5) {
                     // 出现字幕
                     $('.x-subtitles-first').show();
@@ -125,9 +126,6 @@
                 document.addEventListener("WeixinJSBridgeReady", function () {
                     // loading结束后自动播放
                     audio.play();
-                    setTimeout(function(){
-                        alert(1212);
-                    },1500)
                 }, false);
             })();
         });
