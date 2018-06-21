@@ -1,0 +1,477 @@
+/* 
+*loading页 部分
+*/
+/* 脑子抖动动画 */
+@keyframes brainshake{
+    0% {
+        transform: scale(1, 1);
+    }
+
+    50% {
+        transform: scale(1.1, 1.1);
+    }
+
+    100% {
+        transform: scale(1, 1);
+    }
+}
+@-webkit-keyframes brainshake{
+    0% {
+        transform:scale(1, 1);
+    }
+    50% {
+        transform:scale(1.1, 1.1);
+    }
+    100% {
+        transform:scale(1, 1);
+    }
+}
+/* 人物变大 */
+@keyframes peoplescale {
+    0% {
+        transform: scale(0.2, 0.2);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
+}
+@-webkit-keyframes peoplescale {
+    0% {
+        transform: scale(0.2, 0.2);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
+}
+.x-loading{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 1001;
+    background-color: rgba(0, 0, 0, 1);
+}
+.x-loading-tit{
+    width: 100%;
+    height: 1.342593rem;
+    position: absolute;
+    top: 3.518519rem;
+    background: url("../images/loadingTitle.png");
+    background-size: 100% 100%;
+    background-repeat:no-repeat; 
+}
+/* .x-loading-tit p{
+    width: 100%;
+    height: 50%;
+    font-size: .555556rem;
+    line-height: .671296rem;
+    text-align: center;
+    color: white;
+} */
+.x-loading-brain{
+    width: 2.759259rem;
+    height: 2.212963rem;
+    background: url("../images/emptyBrain.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 5.435185rem;
+    left: calc(50% - 1.37963rem);
+    /* animation: brainshake 0.5s infinite;
+    -webkit-animation: brainshake 0.5s infinite; */
+}
+.x-loading-people{
+    width: .462963rem;
+    height: 1.194444rem;
+    background: url("../images/loadingPeople.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 5.87963rem;
+    left: calc(50% - .231481rem);
+    animation: peoplescale 1.5s 1;
+    -webkit-animation: peoplescale 1.5s 1;
+}
+.x-loading-number{
+    width: 100%;
+    height: .37037rem;
+    position: absolute;
+    top: 8.287037rem;
+}
+.x-loading-number p{
+    width: 100%;
+    height: .37037rem;
+    font-size: .422778rem;
+    line-height: .37037rem;
+    text-align: center;
+    color: white;
+}
+
+/* 
+*首页 部分
+*/
+/* star闪动动画 */
+
+@keyframes starTwinkle {
+    0% {
+        background: url("../images/star1.png");
+        background-size: 100% 100%;
+    }
+    100% {
+        background: url("../images/star2.png");
+        background-size: 100% 100%;
+    }
+}
+
+@-webkit-keyframes starTwinkle {
+    0% {
+        background: url("../images/star1.png");
+        background-size: 100% 100%;
+    }
+    100% {
+        background: url("../images/star2.png");
+        background-size: 100% 100%;
+    }
+}
+/* 主题左右抖动效果 */
+@keyframes titleshake {
+    0% {
+        transform: translateY(-4.092593rem)
+    }
+    30% {
+        transform: translateY(3.092593rem)
+    }
+    55% {
+        transform: translateY(-2.092593rem)
+    }
+    75% {
+        transform: translateY(1.092593rem)
+    }
+    88% {
+        transform: translateY(-.092593rem)
+    }
+    100% {
+        transform: translateY(0rem)
+    }
+}
+
+@-webkit-keyframes titleshake {
+    0% {
+        transform: translateY(-4.092593rem)
+    }
+    30% {
+        transform: translateY(3.092593rem)
+    }
+    55% {
+        transform: translateY(-2.092593rem)
+    }
+    75% {
+        transform: translateY(1.092593rem)
+    }
+    88% {
+        transform: translateY(-.092593rem)
+    }
+    100% {
+        transform: translateY(0rem)
+    }
+}
+/* 浮动元素 左右浮动 */
+@keyframes subtitleshake {
+    0% {
+        transform: translateX(0rem)
+    }
+    25% {
+        transform: translateX(.046296rem)
+    }
+    50% {
+        transform: translateX(0rem)
+    }
+    75% {
+        transform: translateX(-.046296rem)
+    }
+    100% {
+        transform: translateX(0rem)
+    }
+}
+
+@-webkit-keyframes subtitleshake {
+    0% {
+        transform: translateX(0rem)
+    }
+    25% {
+        transform: translateX(.046296rem)
+    }
+    50% {
+        transform: translateX(0rem)
+    }
+    75% {
+        transform: translateX(-.046296rem)
+    }
+    100% {
+        transform: translateX(0rem)
+    }
+}
+/* 眨眼 */
+@keyframes load-ami {
+    0% {
+        background: url(../images/eyes/1.png) no-repeat;
+        background-size: cover;
+    }
+    5% {
+        background: url(../images/eyes/2.png) no-repeat;
+        background-size: cover;
+    }
+    10% {
+        background: url(../images/eyes/3.png) no-repeat;
+        background-size: cover;
+    }
+    15% {
+        background: url(../images/eyes/4.png) no-repeat;
+        background-size: cover;
+    }
+    20% {
+        background: url(../images/eyes/5.png) no-repeat;
+        background-size: cover;
+    }
+    25% {
+        background: url(../images/eyes/6.png) no-repeat;
+        background-size: cover;
+    }
+    30% {
+        background: url(../images/eyes/7.png) no-repeat;
+        background-size: cover;
+    }
+    35% {
+        background: url(../images/eyes/8.png) no-repeat;
+        background-size: cover;
+    }
+    95% {
+        background: url(../images/eyes/8.png) no-repeat;
+        background-size: cover;
+    }
+    100% {
+        background: url(../images/eyes/1.png) no-repeat;
+        background-size: cover;
+    }
+}
+
+@-webkit-keyframes load-ami {
+    0% {
+        background: url(../images/eyes/1.png) no-repeat;
+        background-size: cover;
+    }
+    5% {
+        background: url(../images/eyes/2.png) no-repeat;
+        background-size: cover;
+    }
+    10% {
+        background: url(../images/eyes/3.png) no-repeat;
+        background-size: cover;
+    }
+    15% {
+        background: url(../images/eyes/4.png) no-repeat;
+        background-size: cover;
+    }
+    20% {
+        background: url(../images/eyes/5.png) no-repeat;
+        background-size: cover;
+    }
+    25% {
+        background: url(../images/eyes/6.png) no-repeat;
+        background-size: cover;
+    }
+    30% {
+        background: url(../images/eyes/7.png) no-repeat;
+        background-size: cover;
+    }
+    35% {
+        background: url(../images/eyes/8.png) no-repeat;
+        background-size: cover;
+    }
+    95% {
+        background: url(../images/eyes/8.png) no-repeat;
+        background-size: cover;
+    }
+    100% {
+        background: url(../images/eyes/1.png) no-repeat;
+        background-size: cover;
+    }
+}
+
+.x-eyes {
+    position: absolute;
+    z-index: 998;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+
+.x-eyesAmi {
+    animation: load-ami 1.5s steps(1, end) infinite;
+    -webkit-animation: load-ami 1.5s steps(1, end) infinite;
+}
+.x-main{
+    width: 100%;
+    height: 100%;
+    background: url("../images/indexBg.jpg");
+    z-index: 1;
+    background-size: 100% 100%;
+}
+
+.x-main-bgstar{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0px;
+    left: 0px;
+    background: url("../images/star1.png");
+    background-size: 100% 100%;
+    animation: starTwinkle 1s infinite;
+    -webkit-animation: starTwinkle 1s infinite;
+    z-index: 2;
+}
+.x-main-music-play{
+    width: 1.064815rem;
+    height: 1.064815rem;
+    position: fixed;
+    top: .37037rem;
+    right: .259259rem;
+    background: url("../images/musicPlay.png");
+    background-size: 100% 100%;
+    z-index: 1000;
+}
+.x-main-lineroad{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0px;
+    left: 0px;
+    background: url("../images/indexLineRoad.png");
+    background-size: 100% 100%;
+    z-index: 3;
+}
+.x-main-tit{
+    width: 5.185185rem; /*560px*/
+    height: 5.305556rem;
+    position: absolute;
+    top:.972222rem;
+    left: calc(50% - 2.592593rem);
+    background: url("../images/indexTopTitle.png");
+    background-size: 100% 100%;
+    z-index: 4;
+}
+.x-main-titAmi {
+    animation: titleshake .7s;
+    animation-iteration-count: 1;
+    -webkit-animation: titleshake .7s;
+    -webkit-animation-iteration-count: 1;
+}
+.x-main-subtit{
+    width: 2.583333rem;
+    height: 4.111111rem;
+    position: absolute;
+    top: 2.009259rem;
+    left: .972222rem;
+    background: url("../images/subtitle.png");
+    background-size: 100% 100%;
+    z-index: 3;
+    animation: titleshake 0.7s infinite;
+    -webkit-animation: titleshake 0.7s infinite;
+    display: none;
+}
+.x-main-floatElement{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: url("../images/floatIcon.png");
+    background-size: 100% 100%;
+    z-index: 5;
+    animation: subtitleshake 0.5s infinite;
+    -webkit-animation: subtitleshake 0.5s infinite;
+}
+.x-main-fingerArrow{
+    width: 1.657407rem;
+    height: 3.814815rem;
+    position: absolute;
+    top: 7.657407rem;
+    right: 2.435185rem;
+    background: url("../images/fingerArrow.png");
+    background-size: 100% 100%;
+    z-index: 5;
+}
+.x-main-btn-instruction{
+    width: 2.842593rem;
+    height: 1.166667rem;
+    position: fixed;
+    bottom: .277778rem;
+    right: .259259rem;
+    background: url("../images/actInstruction.png");
+    background-size: 100% 100%;
+    z-index: 5;
+}
+.x-main-people{
+    width: 8.944444rem;
+    height: 9.222222rem;
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    background: url("../images/people.png");
+    background-size: 100% 100%;
+    z-index: 4;
+}
+.x-subtitles{
+    width: 100%;
+    height: .416667rem;
+    position: fixed;
+    bottom: 2.314815rem;
+    left: 0px;
+    z-index: 997
+}
+.x-subtitles p{
+    width: 100%;
+    font-size: 20px;
+    line-height: .416667rem;
+    color: white;
+    text-align: center;
+    display: none;
+}
+.x-show{
+    display: block!important;
+}
+.x-instruction{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 998;
+    display: none;
+}
+.x-instruction-content {
+    width: 8.203704rem;
+    height: 7.407407rem;
+    position: absolute;
+    top: 3.935185rem;
+    left: .898148rem;
+    background: url("../images/instruction.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    z-index: 999;
+}
+.x-instruction-close {
+    width: 1.138889rem;
+    height: 1.138889rem;
+    position: absolute;
+    top: 3.546296rem;
+    right: .62963rem;
+    background: url("../images/instructionClose.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    z-index: 1000;
+}
