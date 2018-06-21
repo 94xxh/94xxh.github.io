@@ -118,6 +118,21 @@
                 // 出现字母
             }, 70000)
         })($);
+        // 微信音频不能自动播放问题
+        document.addEventListener('DOMContentLoaded', function () {
+
+            (function audioAutoPlay() {
+                var audio = document.getElementById('audio');
+                audio.play();
+                document.addEventListener("WeixinJSBridgeReady", function () {
+                    // loading结束后自动播放
+                    setTimeout(function(){
+                        audio.play();
+                    },1500)
+                }, false);
+            })();
+        });
+        //end
     </script>
 </body>
 </html>
