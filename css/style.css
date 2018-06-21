@@ -397,8 +397,8 @@
 .x-main-fingerArrow{
     width: 1.657407rem;
     height: 3.814815rem;
-    position: absolute;
-    top: 7.657407rem;
+    position: fixed;
+    bottom:4.787037rem;
     right: 2.435185rem;
     background: url("../images/fingerArrow.png");
     background-size: 100% 100%;
