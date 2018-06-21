@@ -97,10 +97,9 @@
                 // 标题抖动
                 $('.x-main-tit').addClass('x-main-titAmi');
                 // 播放音乐
-                // audio.play();
+                audio.play();
             },1500)
             setInterval(function(){
-                console.log(audio.currentTime);//播放进度
                 if (audio.currentTime < 5.1 && audio.currentTime > 5) {
                     // 出现字幕
                     $('.x-subtitles-first').show();
