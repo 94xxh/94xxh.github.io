@@ -345,23 +345,23 @@
 /* 头盖上升 */
 @keyframes peopleBrainUp {
     from {
-        /* top: 6.944444rem; */
-        bottom: 5.935185rem;
+        top: 6.944444rem;
+        /* bottom: 5.935185rem; */
     }
     to {
-        /* top: 1.981481rem; */
-        bottom: 11.046296rem;
+        top: 1.981481rem;
+        /* bottom: 11.046296rem; */
     }
 }
 
 @-webkit-keyframes peopleBrainUp {
     from {
-        /* top: 6.944444rem; */
-        bottom: 5.935185rem;
+        top: 6.944444rem;
+        /* bottom: 5.935185rem; */
     }
     to {
-        /* top: 1.981481rem; */
-        bottom: 11.046296rem;
+        top: 1.981481rem;
+        /* bottom: 11.046296rem; */
     }
 }
 /* 闪烁 */
@@ -427,7 +427,7 @@
 }
 @keyframes Element3Ami {
     from {
-        top: 7.611111rem;
+        top: 6.138889rem;
     }
     to {
         top: 9.148148rem;
@@ -436,7 +436,7 @@
 
 @-webkit-keyframes Element3Ami {
     from {
-        top: 7.611111rem;
+        top: 6.138889rem;
     }
     to {
         top: 9.148148rem;
@@ -576,7 +576,8 @@
     /*560px*/
     height: 2.787037rem;
     position: fixed;
-    bottom: 12.944444rem;
+    top: .490741rem;
+    /* bottom: 12.944444rem; */
     left: 1.518519rem;
     background: url("../images/secondTit.png");
     background-size: 100% 100%;
@@ -649,7 +650,7 @@
     width: 1.351852rem;
     height: 1.222222rem;
     position: absolute;
-    top: 7.611111rem;
+    top: 6.138889rem;
     right: 1.324074rem;
     background: url("../images/btnMe.png");
     background-size: 100% 100%;
@@ -709,8 +710,8 @@
     width: 7.185185rem;
     height: 3.462963rem;
     position: fixed;
-    bottom: 5.935185rem;
-    /* top: 6.944444rem; */
+    /* bottom: 5.935185rem; */
+    top: 6.944444rem;
     right: 0.902963rem;
     background: url("../images/brainUp.png");
     background-size: 100% 100%;
