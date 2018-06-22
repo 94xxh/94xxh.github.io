@@ -1,22 +1,189 @@
----
-layout: home-page
----
-<audio style="display:none" autoplay="autoplay" src="http://mp3.qqmusic.cc/yq/212447875.mp3"></audio>
-<ol class="post-card-box clearfix">
-  {% for post in paginator.posts %}
-  <li>
-    <div class="post-card">
-      <a href="{{post.url | prepend: site.baseurl}}" class="post-card-image" style="background-image: url( {{ "/assets/img/" | prepend: site.baseurl | append : post.img}} )">
-      </a>
-
-      <div class="post-card-body">
-        {% for tag in post.tags %}
-        <a href="{{site.baseurl}}/tags#{{tag}}" class="tag">|&#32;{{ tag }}</a>
-        {% endfor %}
-        <a href="{{post.url | prepend: site.baseurl}}" class="post-card-link"><h3 class="post-card-title">{{post.title}}</h3></a>
-      </div>
-
+<html lang="en">
+<head>
+    <title>我怀疑你脑里住了一个人</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
+    <link rel="stylesheet" href="./css/style.css?v=1.2.2">
+</head>
+<body>
+    <audio id="x-bgmusic" loop="loop" style="display: none" src="http://www.170mv.com/kw/other.web.nf01.sycdn.kuwo.cn/resource/n3/76/61/1987023712.mp3"></audio>
+    <!-- loading -->
+    <div class="x-loading">
+        <!-- tit -->
+        <div class="x-loading-tit"></div>
+        <!-- pinkbrain -->
+        <div class="x-loading-brain"></div>
+        <div class="x-loading-people"></div>
+        <!-- loading number -->
+        <div class="x-loading-number">
+            <p>100%</p>
+        </div>
     </div>
-  </li>
-  {% endfor %}
-</ol>
+    <!-- 眨眼效果 -->
+    <div class="x-eyes"></div>
+    <!-- 文字 -->
+    <div class="x-subtitles">
+        <p class="x-subtitles-first">这不是我吗？</p>
+        <p class="x-subtitles-last">欢迎进入你的大脑</p>
+    </div>
+    <!-- 首页main -->
+    <div class="x-main">
+        <!-- star -->
+        <div class="x-main-bgstar"></div>
+        <!-- musicplay -->
+        <div class="x-main-music-play x-main-music-playAmi"></div>
+        <!-- lineroad -->
+        <div class="x-main-lineroad"></div>
+        <!-- tit -->
+        <div class="x-main-tit"></div>
+        <div class="x-main-secondTit"></div>
+        <!-- 被发现 -->
+        <div class="x-main-subtit"></div>
+        <!-- 悬浮元素 -->
+        <div class="x-main-floatElement1"></div>
+        <div class="x-main-floatElement2"></div>
+        <div class="x-main-floatElement3"></div>
+        <!-- 箭头 手指 -->
+        <div class="x-main-fingerArrow"></div>
+        <div class="x-main-finger"></div>
+        <!-- instruction -->
+        <div class="x-main-btn-instruction"></div>
+        <!-- people -->
+        <div class="x-main-people"></div>
+        <div class="x-main-peopleBrain"></div>
+        <div class="x-main-peopleOpen"></div>
+        <!-- 射线 -->
+        <div class="x-main-flashSun"></div>
+        <!-- 小人 -->
+        <div class="x-main-youngPeople"></div>
+        <!-- 题目部分 -->
+        <div class="x-main-question"></div>
+    </div>
+    <!-- end -->
+    <!-- 活动介绍 -->
+    <div class="x-instruction">
+        <div class="x-instruction-content"></div>
+        <div class="x-instruction-close"></div>
+    </div>
+    <script src="./js/jquery.js"></script>
+    <script>
+        (function(){
+            // 加载进度条
+            let i = 0;
+            setInterval(function(){
+                if (i<100){
+                    i++;
+                    $('.x-loading-number p').text(i+'%');
+                }
+            },15);
+            // 活动介绍 弹出 关闭
+            $('.x-main').on('click', '.x-main-btn-instruction', function(){
+                $('.x-instruction').fadeIn();
+                // 禁止滚动
+                $('body').css('overflow',"hidden");
+            });
+            $('.x-instruction').on('click', '.x-instruction-close', function(){
+                $('.x-instruction').fadeOut();
+                $('body').css('overflow',"auto");
+            });
+            // playmusic
+            var audio=document.getElementById('x-bgmusic');
+            $('.x-main').on('click', '.x-main-music-play', function(){
+                if (audio.paused){
+                    $(this).addClass('x-main-music-playAmi');
+                    audio.play();
+                } else {
+                    $(this).removeClass('x-main-music-playAmi');
+                    audio.pause();
+                }
+            });
+            $('.x-eyes').on('click', function(){
+                audio.play();
+            });
+            // end
+            setTimeout(function(){
+                $('.x-loading').fadeOut()
+                // 标题抖动
+                $('.x-main-tit').addClass('x-main-titAmi');
+            },1500);
+            setTimeout(function(){
+                // 开始眨眼动画
+                $('.x-eyes').addClass('x-eyesAmi');
+            },2000);
+            // 循环查询音乐时间 更新字幕
+            setInterval(function(){
+                if (audio.currentTime < 3 && audio.currentTime > 1) {
+                    // 出现字幕1
+                    $('.x-subtitles-first').show();
+                } else if (audio.currentTime < 6 && audio.currentTime > 3) {
+                    // 出现字幕2
+                    $('.x-subtitles-first').hide();
+                    $('.x-subtitles-last').show();
+                } else if (audio.currentTime < 8 && audio.currentTime > 6){
+                    $('.x-subtitles-last').hide();
+                    // 字幕，眨眼关闭
+                    $('.x-eyes').hide();
+                }
+                
+            },100);
+
+            // 点击手指
+            $('.x-main').on('click', '.x-main-finger', function(){
+                // 主题更换
+                $('.x-main-tit').hide();
+                // 打开大脑
+                $('.x-main-people').hide();
+                $('.x-main-peopleBrain').show();
+                $('.x-main-peopleOpen').show();
+                // 星球移动
+                $('.x-main-floatElement1').addClass('x-main-floatElement1Ami');
+                $('.x-main-floatElement2').addClass('x-main-floatElement2Ami');
+                $('.x-main-floatElement3').addClass('x-main-floatElement3Ami');
+                // 手指消失
+                $('.x-main-fingerArrow').hide();
+                $('.x-main-finger').hide();
+                $('.x-main-peopleBrain').addClass('x-main-peopleBrainAmi');
+                setTimeout(function(){
+                    $('.x-main-flashSun').fadeIn();
+                },1510)
+                setTimeout(function () {
+                    $('.x-main-youngPeople').fadeIn();
+                    $('.x-main-subtit').fadeIn();
+                    $('.x-main-secondTit').fadeIn(); 
+                }, 1600)
+            });
+            // end
+            
+            // 一探究竟 开始答题
+            $('.x-main').on('click', '.x-main-secondTit', function(){
+                $(this).animate({top:"-10rem"});
+                $('.x-main-flashSun').hide();
+                $('.x-main-youngPeople').animate({left:"-10rem"});
+                $('.x-main-subtit').animate({left:"-10rem"});
+                $('.x-main-btn-instruction').animate({bottom:"-10rem"});
+                $('.x-main-floatElement3').removeClass('x-main-floatElement3Ami');
+                $('.x-main-floatElement3').animate({top:"12.111111rem"});
+                $('.x-main-peopleOpen').animate({bottom:"-4.5rem"});
+                $('.x-main').css('background-image',"url(./images/indexBgNew.jpg)");
+                // 橙色星球消失
+                $('.x-main-floatElement1').hide();
+                $('.x-main-question').fadeIn();
+            })
+            // end
+            // 微信音频不能自动播放问题
+            document.addEventListener('DOMContentLoaded', function () {
+                (function audioAutoPlay() {
+                    audio.play();
+                    document.addEventListener("WeixinJSBridgeReady", function () {
+                        audio.play();
+                    }, false);
+                })();
+            });
+        // end
+        })($);
+
+
+    </script>
+</body>
+</html>

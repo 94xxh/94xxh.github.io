@@ -78,8 +78,9 @@
     position: absolute;
     top: 5.435185rem;
     left: calc(50% - 1.37963rem);
-    /* animation: brainshake 0.5s infinite;
-    -webkit-animation: brainshake 0.5s infinite; */
+    animation: brainshake 1.5s linear infinite;
+    -webkit-animation: brainshake 1.5s linear infinite;
+   
 }
 .x-loading-people{
     width: .462963rem;
@@ -90,8 +91,8 @@
     position: absolute;
     top: 5.87963rem;
     left: calc(50% - .231481rem);
-    animation: peoplescale 1.5s 1;
-    -webkit-animation: peoplescale 1.5s 1;
+    animation: peoplescale 1.5s linear 1;
+    -webkit-animation: peoplescale 1.5s linear 1;
 }
 .x-loading-number{
     width: 100%;
@@ -298,10 +299,205 @@
         background-size: cover;
     }
 }
+/* 手指箭头 */
+@keyframes fingerArrow {
+    0% {
+        bottom: 7.531481rem;
+    }
+    50%{
+        bottom: 7.931481rem;
+    }
+    100% {
+        bottom: 7.531481rem;
+    }
+}
 
+@-webkit-keyframes fingerArrow {
+    0% {
+        bottom: 7.531481rem;
+    }
+    50%{
+        bottom: 7.931481rem;
+    }
+    100% {
+        bottom: 7.531481rem;
+    }
+}
+/* 选装 */
+@keyframes xRoateAmi {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes xRoateAmi {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* 头盖上升 */
+@keyframes peopleBrainUp {
+    from {
+        /* top: 6.944444rem; */
+        bottom: 5.935185rem;
+    }
+    to {
+        /* top: 1.981481rem; */
+        bottom: 11.046296rem;
+    }
+}
+
+@-webkit-keyframes peopleBrainUp {
+    from {
+        /* top: 6.944444rem; */
+        bottom: 5.935185rem;
+    }
+    to {
+        /* top: 1.981481rem; */
+        bottom: 11.046296rem;
+    }
+}
+/* 闪烁 */
+@keyframes shiningAmi {
+    from {
+        display: block;
+    }
+    to {
+        display: none;
+    }
+}
+
+@-webkit-keyframes shiningAmi {
+    from {
+        display: block;
+    }
+    to {
+        display: none;
+    }
+}
+/* 星球移动 */
+@keyframes Element1Ami {
+    from {
+        top: .805556rem;
+        left: .722222rem;
+        transform: rotate(0deg);
+    }
+    to {
+        top: 7.148148rem;
+        left: 8.511111rem;
+        transform: rotate(15deg);
+    }
+}
+
+@-webkit-keyframes Element1Ami {
+    from {
+        top: .805556rem;
+        left: .722222rem;
+        transform: rotate(0deg);
+    }
+    to {
+        top: 7.148148rem;
+        left: 8.511111rem;
+        transform: rotate(15deg);
+    }
+}
+@keyframes Element2Ami {
+    from {
+        bottom: 7.564815rem;
+    }
+    to {
+        bottom: 3.240741rem;
+    }
+}
+
+@-webkit-keyframes Element2Ami {
+    from {
+        bottom: 7.564815rem;
+    }
+    to {
+        bottom: 3.240741rem;
+    }
+}
+@keyframes Element3Ami {
+    from {
+        top: 7.611111rem;
+    }
+    to {
+        top: 9.148148rem;
+    }
+}
+
+@-webkit-keyframes Element3Ami {
+    from {
+        top: 7.611111rem;
+    }
+    to {
+        top: 9.148148rem;
+    }
+}
+/* 左右飞离 */
+@keyframes xflyLeft {
+    from {
+        transform: translateY(0rem);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(-10rem);
+        opacity: 0.01;
+    }
+}
+
+@-webkit-keyframes xflyLeft {
+    from {
+        transform: translateY(0rem);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(-10rem);
+        opacity: 0.01;
+    }
+}
+@keyframes xflyRight {
+    from {
+        opacity: 0.01;
+    }
+    to {
+        right: -10rem;
+        opacity: 0.01;
+    }
+}
+
+@-webkit-keyframes xflyRight {
+    from {
+        opacity: 0.01;
+    }
+    to {
+        right: -10rem;
+        opacity: 0.01;
+    }
+}
+.flyLeftAmi{
+    animation: xflyLeft 1s linear 1;
+    -webkit-animation: xflyLeft 1s linear 1;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+}
+.flyRightAmi {
+    animation: xflyRight 1s linear 1;
+    -webkit-animation: xflyRight 1s linear 1;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+}
 .x-eyes {
     position: absolute;
-    z-index: 998;
+    z-index: 1002;
     top: 0px;
     left: 0px;
     width: 100%;
@@ -320,7 +516,9 @@
     z-index: 1;
     background-size: 100% 100%;
 }
-
+.x-mainNew {
+    background: url("../images/indexBgNew.jpg")!important;
+}
 .x-main-bgstar{
     width: 100%;
     height: 100%;
@@ -329,8 +527,8 @@
     left: 0px;
     background: url("../images/star1.png");
     background-size: 100% 100%;
-    animation: starTwinkle 1s infinite;
-    -webkit-animation: starTwinkle 1s infinite;
+    animation: starTwinkle 1s linear infinite;
+    -webkit-animation: starTwinkle 1s linear infinite;
     z-index: 2;
 }
 .x-main-music-play{
@@ -342,6 +540,10 @@
     background: url("../images/musicPlay.png");
     background-size: 100% 100%;
     z-index: 1000;
+}
+.x-main-music-playAmi {
+    animation: xRoateAmi 2s linear infinite;
+    -webkit-animation: xRoateAmi 2s linear infinite;
 }
 .x-main-lineroad{
     width: 100%;
@@ -364,25 +566,40 @@
     z-index: 4;
 }
 .x-main-titAmi {
-    animation: titleshake .7s;
+    animation: titleshake .7s linear;
     animation-iteration-count: 1;
-    -webkit-animation: titleshake .7s;
+    -webkit-animation: titleshake .7s linear;
     -webkit-animation-iteration-count: 1;
+}
+.x-main-secondTit {
+    width: 6.712963rem;
+    /*560px*/
+    height: 2.787037rem;
+    position: fixed;
+    bottom: 12.944444rem;
+    left: 1.518519rem;
+    background: url("../images/secondTit.png");
+    background-size: 100% 100%;
+    z-index: 14;
+    display: none;
+    animation: brainshake 1s linear infinite;
+    -webkit-animation: brainshake 1s linear infinite;
 }
 .x-main-subtit{
     width: 2.583333rem;
     height: 4.111111rem;
     position: absolute;
-    top: 2.009259rem;
-    left: .972222rem;
+    /* top: 2.009259rem; */
+    bottom: 9.324074rem;
+    left: 1.259259rem;
     background: url("../images/subtitle.png");
     background-size: 100% 100%;
-    z-index: 3;
-    animation: titleshake 0.7s infinite;
-    -webkit-animation: titleshake 0.7s infinite;
+    z-index: 12;
+    animation: subtitleshake 0.15s linear infinite;
+    -webkit-animation: subtitleshake 0.15s linear infinite;
     display: none;
 }
-.x-main-floatElement{
+/* .x-main-floatElement{
     width: 100%;
     height: 100%;
     position: absolute;
@@ -391,18 +608,82 @@
     background: url("../images/floatIcon.png");
     background-size: 100% 100%;
     z-index: 5;
-    animation: subtitleshake 0.5s infinite;
-    -webkit-animation: subtitleshake 0.5s infinite;
+    animation: subtitleshake 1s linear infinite;
+    -webkit-animation: subtitleshake 1s linear infinite;
+} */
+.x-main-floatElement1 {
+    width: .861111rem;
+    height: .638889rem;
+    position: absolute;
+    top: .805556rem;
+    left: .722222rem;
+    background: url("../images/orangeBall.png");
+    background-size: 100% 100%;
+    z-index: 10;
+}
+.x-main-floatElement1Ami {
+    animation: Element1Ami 1.5s linear 1;
+    -webkit-animation: Element1Ami 1.5s linear 1;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+}
+.x-main-floatElement2 {
+    width: .990741rem;
+    height: .666667rem;
+    position: absolute;
+    bottom: 7.564815rem;
+    left: .740741rem;
+    background: url("../images/greenBall.png");
+    background-size: 100% 100%;
+    z-index: 13;
+    animation: subtitleshake 1s linear infinite;
+    -webkit-animation: subtitleshake 1s linear infinite;
+}
+.x-main-floatElement2Ami {
+    animation: Element2Ami 1.5s linear 1;
+    -webkit-animation: Element2Ami 1.5s linear 1;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+}
+.x-main-floatElement3 {
+    width: 1.351852rem;
+    height: 1.222222rem;
+    position: absolute;
+    top: 7.611111rem;
+    right: 1.324074rem;
+    background: url("../images/btnMe.png");
+    background-size: 100% 100%;
+    z-index: 13;
+    animation: subtitleshake 1s linear infinite;
+    -webkit-animation: subtitleshake 1s linear infinite;
+}
+.x-main-floatElement3Ami {
+    animation: Element3Ami 1.5s linear 1;
+    -webkit-animation: Element3Ami 1.5s linear 1;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
 }
 .x-main-fingerArrow{
-    width: 1.657407rem;
-    height: 3.814815rem;
+    width: 1.092593rem;
+    height: 1.12037rem;
     position: fixed;
-    bottom:4.787037rem;
-    right: 2.435185rem;
-    background: url("../images/fingerArrow.png");
+    bottom: 7.531481rem;
+    right: 3.001852rem;
+    background: url("../images/upArrow.png");
     background-size: 100% 100%;
     z-index: 5;
+    animation: fingerArrow 1s linear infinite;
+    -webkit-animation: fingerArrow 1s linear  infinite;
+}
+.x-main-finger {
+    width: 1.731481rem;
+    height: 2.787037rem;
+    position: fixed;
+    bottom: 4.587037rem;
+    right: 2.425926rem;
+    background: url("../images/finger.png");
+    background-size: 100% 100%;
+    z-index: 6;
 }
 .x-main-btn-instruction{
     width: 2.842593rem;
@@ -412,7 +693,7 @@
     right: .259259rem;
     background: url("../images/actInstruction.png");
     background-size: 100% 100%;
-    z-index: 5;
+    z-index: 10;
 }
 .x-main-people{
     width: 8.944444rem;
@@ -422,6 +703,35 @@
     right: 0px;
     background: url("../images/people.png");
     background-size: 100% 100%;
+    z-index: 4;
+}
+.x-main-peopleBrain {
+    width: 7.185185rem;
+    height: 3.462963rem;
+    position: fixed;
+    bottom: 5.935185rem;
+    /* top: 6.944444rem; */
+    right: 0.902963rem;
+    background: url("../images/brainUp.png");
+    background-size: 100% 100%;
+    display: none;
+    z-index: 11;
+}
+.x-main-peopleBrainAmi{
+    animation: peopleBrainUp 1.5s linear 1;
+    -webkit-animation: peopleBrainUp 1.5s linear 1;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+}
+.x-main-peopleOpen {
+    width: 8.898148rem;
+    height: 8.12963rem;
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    background: url("../images/peopleOpen.png");
+    background-size: 100% 100%;
+    display: none;
     z-index: 4;
 }
 .x-subtitles{
@@ -480,4 +790,49 @@
     background-repeat: no-repeat;
     background-size: 100% 100%;
     z-index: 1000;
+}
+
+.x-main-flashSun{
+    width: 100%;
+    height: 10.074074rem;
+    position: fixed;
+    /* top: 2.314815rem; */
+    bottom: 4.296296rem;
+    left: 0px;
+    background: url("../images/flashSun.png");
+    background-size: 100% 100%;
+    display: none;
+    z-index: 5;
+    animation: shiningAmi 0.5s linear infinite;
+    -webkit-animation: shiningAmi 0.5s linear infinite;
+}
+.x-main-youngPeople{
+    width: 3.185185rem;
+    height: 5.361111rem;
+    position: fixed;
+    /* top: 4.351852rem; */
+    bottom: 6.444444rem;
+    left: 3.842593rem;
+    background: url("../images/youngPeople.png");
+    background-size: 100% 100%;
+    display: none;
+    z-index: 10;
+    animation: subtitleshake 0.15s linear infinite;
+    -webkit-animation: subtitleshake 0.15s linear infinite;
+}
+
+/* 题目 */
+.x-main-question{
+    display: none;
+    width: 3.185185rem;
+    height: 5.361111rem;
+    position: fixed;
+    /* top: 4.351852rem; */
+
+    bottom: 6.444444rem;
+    left: 3.842593rem;
+    background: url("../images/questionTest.png");
+    background-size: 100% 100%;
+    display: none;
+    z-index: 10;
 }
