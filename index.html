@@ -153,6 +153,30 @@
                     $('.x-main-secondTit').fadeIn(); 
                 }, 1600)
             });
+            $('.x-main').on('click', '.x-main-fingerArrow', function(){
+                // 主题更换
+                $('.x-main-tit').hide();
+                // 打开大脑
+                $('.x-main-people').hide();
+                $('.x-main-peopleBrain').show();
+                $('.x-main-peopleOpen').show();
+                // 星球移动
+                $('.x-main-floatElement1').addClass('x-main-floatElement1Ami');
+                $('.x-main-floatElement2').addClass('x-main-floatElement2Ami');
+                $('.x-main-floatElement3').addClass('x-main-floatElement3Ami');
+                // 手指消失
+                $('.x-main-fingerArrow').hide();
+                $('.x-main-finger').hide();
+                $('.x-main-peopleBrain').addClass('x-main-peopleBrainAmi');
+                setTimeout(function(){
+                    $('.x-main-flashSun').fadeIn();
+                },1510)
+                setTimeout(function () {
+                    $('.x-main-youngPeople').fadeIn();
+                    $('.x-main-subtit').fadeIn();
+                    $('.x-main-secondTit').fadeIn(); 
+                }, 1600)
+            });
             // end
             
             // 一探究竟 开始答题
