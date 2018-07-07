@@ -1,189 +1,284 @@
-<html lang="en">
+﻿<!doctype html>
+<html class="no-js" lang="en">
 <head>
-    <title>我怀疑你脑里住了一个人</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="format-detection" content="telephone=no">
-    <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
-    <link rel="stylesheet" href="./css/style.css?v=1.2.2">
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>首页</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+<!-- Place favicon.ico in the root directory -->
+
+<!-- Boostrap CSS -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+
+<!-- Owl Carousel -->
+<link rel="stylesheet" href="css/owl.carousel.css">
+<link rel="stylesheet" href="css/owl.transitions.css">
+
+<!-- Animate CSS -->
+<link rel="stylesheet" href="css/animate.css">
+
+<!-- Lightbox CSS -->
+<link rel="stylesheet" href="css/venobox.css">
+
+<!-- Google Web Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Lora:400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+
+
+
+<!-- Font Awesome Icon -->
+<link rel="stylesheet" href="css/font-awesome.min.css" />
+
+<link rel="stylesheet" href="css/normalize.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
+
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<![endif]-->
 </head>
 <body>
-    <audio id="x-bgmusic" loop="loop" style="display: none" src="http://www.170mv.com/kw/other.web.nf01.sycdn.kuwo.cn/resource/n3/76/61/1987023712.mp3"></audio>
-    <!-- loading -->
-    <div class="x-loading">
-        <!-- tit -->
-        <div class="x-loading-tit"></div>
-        <!-- pinkbrain -->
-        <div class="x-loading-brain"></div>
-        <div class="x-loading-people"></div>
-        <!-- loading number -->
-        <div class="x-loading-number">
-            <p>100%</p>
-        </div>
-    </div>
-    <!-- 眨眼效果 -->
-    <div class="x-eyes"></div>
-    <!-- 文字 -->
-    <div class="x-subtitles">
-        <p class="x-subtitles-first">这不是我吗？</p>
-        <p class="x-subtitles-last">欢迎进入你的大脑</p>
-    </div>
-    <!-- 首页main -->
-    <div class="x-main">
-        <!-- star -->
-        <div class="x-main-bgstar"></div>
-        <!-- musicplay -->
-        <div class="x-main-music-play x-main-music-playAmi"></div>
-        <!-- lineroad -->
-        <div class="x-main-lineroad"></div>
-        <!-- tit -->
-        <div class="x-main-tit"></div>
-        <div class="x-main-secondTit"></div>
-        <!-- 被发现 -->
-        <div class="x-main-subtit"></div>
-        <!-- 悬浮元素 -->
-        <div class="x-main-floatElement1"></div>
-        <div class="x-main-floatElement2"></div>
-        <div class="x-main-floatElement3"></div>
-        <!-- 箭头 手指 -->
-        <div class="x-main-fingerArrow"></div>
-        <div class="x-main-finger"></div>
-        <!-- instruction -->
-        <div class="x-main-btn-instruction"></div>
-        <!-- people -->
-        <div class="x-main-people"></div>
-        <div class="x-main-peopleBrain"></div>
-        <div class="x-main-peopleOpen"></div>
-        <!-- 射线 -->
-        <div class="x-main-flashSun"></div>
-        <!-- 小人 -->
-        <div class="x-main-youngPeople"></div>
-        <!-- 题目部分 -->
-        <div class="x-main-question"></div>
-    </div>
-    <!-- end -->
-    <!-- 活动介绍 -->
-    <div class="x-instruction">
-        <div class="x-instruction-content"></div>
-        <div class="x-instruction-close"></div>
-    </div>
-    <script src="./js/jquery.js"></script>
-    <script>
-        (function(){
-            // 加载进度条
-            let i = 0;
-            setInterval(function(){
-                if (i<100){
-                    i++;
-                    $('.x-loading-number p').text(i+'%');
-                }
-            },15);
-            // 活动介绍 弹出 关闭
-            $('.x-main').on('click', '.x-main-btn-instruction', function(){
-                $('.x-instruction').fadeIn();
-                // 禁止滚动
-                $('body').css('overflow',"hidden");
-            });
-            $('.x-instruction').on('click', '.x-instruction-close', function(){
-                $('.x-instruction').fadeOut();
-                $('body').css('overflow',"auto");
-            });
-            // playmusic
-            var audio=document.getElementById('x-bgmusic');
-            $('.x-main').on('click', '.x-main-music-play', function(){
-                if (audio.paused){
-                    $(this).addClass('x-main-music-playAmi');
-                    audio.play();
-                } else {
-                    $(this).removeClass('x-main-music-playAmi');
-                    audio.pause();
-                }
-            });
-            $('.x-eyes').on('click', function(){
-                audio.play();
-            });
-            // end
-            setTimeout(function(){
-                $('.x-loading').fadeOut()
-                // 标题抖动
-                $('.x-main-tit').addClass('x-main-titAmi');
-            },1500);
-            setTimeout(function(){
-                // 开始眨眼动画
-                $('.x-eyes').addClass('x-eyesAmi');
-            },2000);
-            // 循环查询音乐时间 更新字幕
-            setInterval(function(){
-                if (audio.currentTime < 3 && audio.currentTime > 1) {
-                    // 出现字幕1
-                    $('.x-subtitles-first').show();
-                } else if (audio.currentTime < 6 && audio.currentTime > 3) {
-                    // 出现字幕2
-                    $('.x-subtitles-first').hide();
-                    $('.x-subtitles-last').show();
-                } else if (audio.currentTime < 8 && audio.currentTime > 6){
-                    $('.x-subtitles-last').hide();
-                    // 字幕，眨眼关闭
-                    $('.x-eyes').hide();
-                }
-                
-            },100);
+<!-- Preloader -->
+<div id="preloader">
+	<div id="status">&nbsp;</div>
+</div>
 
-            // 点击手指
-            $('.x-main').on('click', '.x-main-finger', function(){
-                // 主题更换
-                $('.x-main-tit').hide();
-                // 打开大脑
-                $('.x-main-people').hide();
-                $('.x-main-peopleBrain').show();
-                $('.x-main-peopleOpen').show();
-                // 星球移动
-                $('.x-main-floatElement1').addClass('x-main-floatElement1Ami');
-                $('.x-main-floatElement2').addClass('x-main-floatElement2Ami');
-                $('.x-main-floatElement3').addClass('x-main-floatElement3Ami');
-                // 手指消失
-                $('.x-main-fingerArrow').hide();
-                $('.x-main-finger').hide();
-                $('.x-main-peopleBrain').addClass('x-main-peopleBrainAmi');
-                setTimeout(function(){
-                    $('.x-main-flashSun').fadeIn();
-                },1510)
-                setTimeout(function () {
-                    $('.x-main-youngPeople').fadeIn();
-                    $('.x-main-subtit').fadeIn();
-                    $('.x-main-secondTit').fadeIn(); 
-                }, 1600)
-            });
-            // end
-            
-            // 一探究竟 开始答题
-            $('.x-main').on('click', '.x-main-secondTit', function(){
-                $(this).animate({top:"-10rem"});
-                $('.x-main-flashSun').hide();
-                $('.x-main-youngPeople').animate({left:"-10rem"});
-                $('.x-main-subtit').animate({left:"-10rem"});
-                $('.x-main-btn-instruction').animate({bottom:"-10rem"});
-                $('.x-main-floatElement3').removeClass('x-main-floatElement3Ami');
-                $('.x-main-floatElement3').animate({top:"12.111111rem"});
-                $('.x-main-peopleOpen').animate({bottom:"-4.5rem"});
-                $('.x-main').css('background-image',"url(./images/indexBgNew.jpg)");
-                // 橙色星球消失
-                $('.x-main-floatElement1').hide();
-                $('.x-main-question').fadeIn();
-            })
-            // end
-            // 微信音频不能自动播放问题
-            document.addEventListener('DOMContentLoaded', function () {
-                (function audioAutoPlay() {
-                    audio.play();
-                    document.addEventListener("WeixinJSBridgeReady", function () {
-                        audio.play();
-                    }, false);
-                })();
-            });
-        // end
-        })($);
+<!-- ============================
+	Intro Section
+============================ -->
+<section class="intro">
+	<div class="main-nav">
+		<nav class="navbar" id="main-navbar">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button> 
+							<!-- <a class="navbar-brand" href="#"><img src="images/brand-logo.png" alt=""></a> -->
+						</div>
+						<div class="collapse navbar-collapse nopadding" id="navbar-collapse">
+							<ul class="nav navbar-nav main-menu">
+								<li class="active"><a href="index.html">主页</a></li>
+								<li class=""><a href="about.html">关于我们</a></li>
+								<!-- <li class=""><a href="team.html">新闻中心</a></li> -->	
+								<li class=""><a href="product.html">产品中心</a></li>
+								<li class=""><a href="partner.html">合作伙伴</a></li>
+								<li class=""><a href="join.html">人力资源</a></li>
+								<li class=""><a href="contact.html">联系我们</a></li>							
+							</ul>
+						</div>
+					</div>
+				</div> 
+			</div><!-- end conainer -->
+		</nav><!-- end navbar -->
+	</div><!-- Main Menu -->
+	
+	<div class="main-slider">
+		<div id="top-slider" class="carousel slide" data-ride="carousel">
+			<ol class="carousel-indicators">
+				<li data-target="#top-slider" data-slide-to="0" class="active"> </li><li data-target="#top-slider" data-slide-to="1"> </li><li data-target="#top-slider" data-slide-to="2"> </li>
+			</ol>
+			<div class="carousel-inner">
+				<div class="item active">
+					<figure>
+						<img src="images/new/IMG_3469.JPG" alt="First slide" class="img-responsive">
+						<figcaption>
+							<div class="container">
+								<h1 class="animated bounceInDown">此处写描述文字</h1>
+								<p class="animated fadeInUp">描述的内容</p>
+								<!-- <a href="" class="animated fadeInUp">Purchase</a> -->
+							</div>
+						</figcaption>
+					</figure>
+				</div>
+			   <div class="item">
+					<figure>
+						<img src="images/new/IMG_3467.JPG" alt="First slide" class="img-responsive">
+						<figcaption>
+							<div class="container">
+								<h1 class="animated fadeInDownBig">此处写描述文字</h1>
+								<p class="animated fadeInUp">描述的内容</p>
+								<!-- <a href="" class="animated fadeInUp">Purchase</a> -->
+							</div>
+						</figcaption>
+					</figure>
+				</div>
+				<div class="item">
+					<figure>
+						<img src="images/new/IMG_3464.JPG" alt="First slide" class="img-responsive">
+						<figcaption>
+							<div class="container">
+								<h1 class="animated bounceInDown">描述的内容</h1>
+								<p class="animated fadeInUp">描述的内容</p>
+								<!-- <a href="" class="animated fadeInUp">Purchase</a> -->
+							</div>
+						</figcaption>
+					</figure>
+				</div>
+			</div>
+			<a class="left carousel-control" href="#top-slider" data-slide="prev"><i class="fa fa-arrow-left"></i></a>
+			<a class="right carousel-control" href="#top-slider" data-slide="next"><i class="fa fa-arrow-right"></i></a>
+		</div>
+	</div><!-- End Main Slider -->
+</section><!-- End Intro -->
 
 
-    </script>
+<!-- ============================
+	Services Section
+============================ -->
+<section class="services">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12 section-header">
+				<h2>产品展示</h2>
+				<p>此处写一些描述性的文字</p>
+			</div>
+
+			<div class="services-content">
+			</div>
+		</div>
+	</div>
+	<div id="myCarousel" class="carousel slide" data-ride="carousel">
+		<!-- 轮播（Carousel）指标 -->
+		<ol class="carousel-indicators">
+			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+			<li data-target="#myCarousel" data-slide-to="1"></li>
+			<li data-target="#myCarousel" data-slide-to="2"></li>
+		</ol>
+		<!-- 轮播（Carousel）项目 -->
+		<div class="carousel-inner new-carousel-inner">
+			<div class="item active">
+				<img src="./images/new/3.jpg" alt="First slide">
+				<img src="./images/new/3.jpg" alt="First slide">
+				<img src="./images/new/3.jpg" alt="First slide">
+			</div>
+			<div class="item">
+				<img src="./images/new/4.jpg" alt="Second slide">
+				<img src="./images/new/3.jpg" alt="First slide">
+				<img src="./images/new/3.jpg" alt="First slide">
+			</div>
+			<div class="item">
+				<img src="./images/new/5.jpg" alt="Third slide">
+				<img src="./images/new/3.jpg" alt="First slide">
+				<img src="./images/new/3.jpg" alt="First slide">
+			</div>
+		</div>
+		<!-- 轮播（Carousel）导航 -->
+		<a class="carousel-control left newcarousel-control" href="#myCarousel" data-slide="prev">
+			<span _ngcontent-c3="" aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>
+		</a>
+		<a class="carousel-control right newcarousel-control" href="#myCarousel" data-slide="next"></a>
+	</div>
+</section><!-- End Services -->
+
+<section class="project-summery">
+	<!-- <div class="container">
+		<div class="row">
+
+		</div>
+	</div> -->
+</section>
+<!-- End Project Summery -->
+<section class="why-choose-us">
+	<div class="container">
+		<div class="row">
+		   <div class="col-sm-12 section-header">
+				<h2>公司简介</h2>
+				<img style="width: 50%;max-height:300px;margin: 0 auto;display:block;" src="./images/new/IMG_3170.JPG" alt="加载失败">
+				<p>
+					此处写公司简介此处写公司简介此处写公司简介此处写公司简介此处写公司简介此处写公司简介此处写公司简介此处写公司简介此处写公司简介此处写公司简介此处写公司简介此处写公司简介此处写公司简介此处写公司简介
+					<br>
+					<a  href="about.html" class="animated fadeInUp newAboutMe">more</a>
+				</p>
+				
+			</div>
+			<div class="col-sm-7 wcu-right">
+				<div class="video-wrapper">
+					<iframe src="" width="640" height="360" allowfullscreen></iframe>
+				</div>
+			</div>
+		</div>
+	</div>
+</section><!-- End why-choose-us -->
+
+<footer>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4 col-sm-8">
+
+			</div><!-- End Widget -->
+			<div class="col-md-4 col-sm-8">
+				<div class="footer-widget">
+					<h2 class="widget-title">我在这里</h2>
+					<div class="widget-content about-us-widget">
+						<!-- <p>我在这里</p> -->
+						<ul class="list-unstyled">
+							<li><i class="fa fa-map-marker"></i> 详细地址</li>
+						</ul>
+					</div>
+				</div>
+			</div><!-- End Widget -->
+
+
+			<div class="col-md-4 col-sm-8">
+				<div class="footer-widget">
+					<h2 class="widget-title">联系我们</h2>
+					<div class="widget-content about-us-widget">
+						<!-- <p>联系我们</p> -->
+						<ul class="list-unstyled">
+							<li><i class="fa fa-envelope"></i> 公司邮箱</li>
+							<li class="clearfix"><i class="fa fa-phone"></i> <p>P: +123 456 789 <br /> F: +987 654 321</p></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- End Widget -->
+
+		</div>
+	</div><!-- End Container -->
+
+</footer><!-- End Footer -->
+
+<!-- jQuery Library -->
+<script src="js/jquery-1.12.0.min.js"></script>
+
+<!-- Bootstrap JS -->
+<script src="js/bootstrap.min.js"></script>
+
+<!-- Sticky JS -->
+<script src="js/jquery.stsicky.js"></script>
+
+<!-- MixitUp JS -->
+<script src="js/jquery.mixitup.js"></script>
+
+<!-- Lightbox JS -->
+<script src="js/venobox.js"></script>
+
+<!-- Owl Carousel -->
+<script src="js/owl.carousel.min.js"></script>
+
+<!-- jQuery Counter Up -->
+<script src="js/waypoints.min.js"></script>
+<script src="js/jquery.counterup.min.js"></script>
+
+<!-- WOW JS -->
+<script src="js/wow.min.js"></script>
+
+<!-- Plugins JS -->
+<script src="js/plugins.js"></script>
+
+<!-- Custom JS -->
+<script src="js/custom.js"></script>
 </body>
 </html>
+
