@@ -153,8 +153,8 @@
 			<li data-target="#myCarousel" data-slide-to="2"></li>
 		</ol>
 		<!-- 轮播（Carousel）项目 -->
-		<div class="carousel-inner new-carousel-inner">
-			<div class="item active">
+		<div class="carousel-inner new-carousel-inner" id="proSlider">
+			<!-- <div class="item active">
 				<img src="./images/new/3.jpg" alt="First slide">
 				<img src="./images/new/3.jpg" alt="First slide">
 				<img src="./images/new/3.jpg" alt="First slide">
@@ -168,7 +168,7 @@
 				<img src="./images/new/5.jpg" alt="Third slide">
 				<img src="./images/new/3.jpg" alt="First slide">
 				<img src="./images/new/3.jpg" alt="First slide">
-			</div>
+			</div> -->
 		</div>
 		<!-- 轮播（Carousel）导航 -->
 		<a class="carousel-control left newcarousel-control" href="#myCarousel" data-slide="prev">
@@ -191,12 +191,13 @@
 		<div class="row">
 		   <div class="col-sm-12 section-header">
 				<h2>公司简介</h2>
-				<img style="width: 50%;max-height:300px;margin: 20px auto;display:block;" src="./images/new/indexImg.jpeg" alt="加载失败">
+				<img style="width: 50%;max-height:400px;margin: 20px auto;display:block;" src="./images/indexImg1.jpg" alt="加载失败">
+				<img style="width: 50%;max-height:400px;margin: 20px auto;display:block;" src="./images/indexImg2.jpeg" alt="加载失败">
 				<p>
  					&nbsp &nbsp九江亿思胶粘制品有限公司成立于2017年，坐落于新洲垦殖场。<br>
 					&nbsp &nbsp &nbsp&nbsp经营范围：聚乙烯缩脚包装用薄膜，绝缘材料、罐装润滑油、润滑脂、包装材料的生产及销售......
 					<br>
-					<a  href="about.html" class="animated fadeInUp newAboutMe">more</a>
+					<a  href="about.html" class="animated fadeInUp newAboutMe">了解更多</a>
 				</p>
 				
 			</div>
@@ -210,40 +211,7 @@
 </section><!-- End why-choose-us -->
 
 <footer>
-	<div class="container">
-		<div class="row">
-			<div class="col-md-4 col-sm-8">
 
-			</div><!-- End Widget -->
-			<div class="col-md-4 col-sm-8">
-				<div class="footer-widget">
-					<h2 class="widget-title">我在这里</h2>
-					<div class="widget-content about-us-widget">
-						<!-- <p>我在这里</p> -->
-						<ul class="list-unstyled">
-							<li><i class="fa fa-map-marker"></i> 详细地址</li>
-						</ul>
-					</div>
-				</div>
-			</div><!-- End Widget -->
-
-
-			<div class="col-md-4 col-sm-8">
-				<div class="footer-widget">
-					<h2 class="widget-title">联系我们</h2>
-					<div class="widget-content about-us-widget">
-						<!-- <p>联系我们</p> -->
-						<ul class="list-unstyled">
-							<li><i class="fa fa-envelope"></i> 公司邮箱</li>
-							<li class="clearfix"><i class="fa fa-phone"></i> <p>P: +123 456 789 <br /> F: +987 654 321</p></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<!-- End Widget -->
-
-		</div>
-	</div><!-- End Container -->
 
 </footer><!-- End Footer -->
 
@@ -277,6 +245,37 @@
 
 <!-- Custom JS -->
 <script src="js/custom.js"></script>
+
+<!-- 底部 -->
+<script src="js/footer.js"></script>
+
+<!-- 产品 -->
+<script src="js/product.js"></script>
+
+<script>
+	window.onload = function(){
+
+		let htmlStr = '';
+		htmlStr += '<div class="item active">';
+		htmlStr += '<a href="productDetail.html?id=1"><img src="./images/product/pro1" alt="First slide"></a>';
+		htmlStr += '<a href="productDetail.html?id=3"><img src="./images/product/pro3" alt="First slide"></a>';
+		htmlStr += '<a href="productDetail.html?id=5"><img src="./images/product/pro5" alt="First slide"></a>';
+		htmlStr += '</div>';
+		htmlStr += '<div class="item">';
+		htmlStr += '<a href="productDetail.html?id=2"><img src="./images/product/pro2" alt="Second slide"></a>';
+		htmlStr += '<a href="productDetail.html?id=4"><img src="./images/product/pro4" alt="Second slide"></a>';
+		htmlStr += '<a href="productDetail.html?id=6"><img src="./images/product/pro6" alt="Second slide"></a>';
+		htmlStr += '</div>';
+		htmlStr += '<div class="item">';
+		htmlStr += '<a href="productDetail.html?id=7"><img src="./images/product/pro7" alt="Second slide"></a>';
+		htmlStr += '<a href="productDetail.html?id=15"><img src="./images/product/pro15" alt="Second slide"></a>';
+		htmlStr += '<a href="productDetail.html?id=9"><img src="./images/product/pro9" alt="Second slide"></a>';
+		htmlStr += '</div>';
+		$(htmlStr).appendTo('#proSlider');
+
+	}
+
+</script>
 </body>
 </html>
 
