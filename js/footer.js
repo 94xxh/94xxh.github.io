@@ -18,7 +18,7 @@ footHtml += '<div class="footer-widget">';
 footHtml += '<h2 class="widget-title">联系我们</h2>';
 footHtml += '<div class="widget-content about-us-widget">';
 footHtml += '<ul class="list-unstyled">';
-footHtml += '<li><i class="fa fa-envelope"></i> <a href="mailto:name@email.com">邮箱</a></li>';
+footHtml += '<li><i class="fa fa-envelope"></i> <a href="mailto:yisite@chinamaxwell.com">邮箱</a><br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="mailto:yisite@yisite.com">备用邮箱</a></li>';
 footHtml += '<li class="clearfix"><i class="fa fa-phone"></i> <p>电话: 0792-8588689</p></li>';
 footHtml += '</ul>';
 footHtml += '</div>';
