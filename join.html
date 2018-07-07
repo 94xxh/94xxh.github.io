@@ -138,7 +138,73 @@
         </div>
     </section>
 
+    <!-- 招聘信息 -->
 
+    <section class="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 section-header">
+                    <h2>招聘职位</h2>
+                    <p>期待你的加入</p>
+                </div>
+                <div class="services-content">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="service-box" style="height: 400px;overflow: hidden;">
+                            <h3 style="border-bottom: 1px solid black;padding-bottom: 5px;">会计</h3>
+                            <p style="text-align: left;padding-left: 10px;color: #bb7979;">-职位职责</p>
+                            <p class="service-split-desc newservice-split-desc">
+                                1.  审批财务收支;
+                            </p>
+                            <p class="service-split-desc newservice-split-desc">
+                                2.  核算成本;
+                            </p>
+                            <p class="service-split-desc newservice-split-desc">
+                                3.  编制会计报表;
+                            </p>
+                            <p class="service-split-desc newservice-split-desc">
+                                4.  审核公司对外提供的会计资料；
+                            </p>
+                            <p class="service-split-desc newservice-split-desc">
+                                5.  编制财务综合分析报告和专题分析报告，为公司领导决策提供可靠的依据；
+                            </p>
+                            <p class="service-split-desc newservice-split-desc">
+                                6.  制定公司内部财务、会计制度和工作程序，经批准后组织实施并监督执行；
+                            </p>
+                            <p style="text-align: left;padding-left: 10px;color: #bb7979;">-任职资格</p>
+                            <p class="service-split-desc newservice-split-desc">
+                                1.  会计相关专业，大专以上学历;
+                            </p>
+                            <p class="service-split-desc newservice-split-desc">
+                                2.  2年以上工作经验，有一般纳税人企业工作经验，有进出口退税经验，高新企业经验优先；
+                            </p>
+                            <p class="service-split-desc newservice-split-desc">
+                                3.  认真细致，爱岗敬业，吃苦耐劳，有良好的职业操守；
+                            </p>
+                            <p class="service-split-desc newservice-split-desc">
+                                4.  思维敏捷，接受能力强，能独立思考，善于总结工作经验；
+                            </p>
+                            <p class="service-split-desc newservice-split-desc">
+                                5.  熟练运用财务及Office办公软件，对金蝶、用友等财务系统有实际操作者优先；
+                            </p>
+                            <p class="service-split-desc newservice-split-desc">
+                                6.  具有良好的沟通能力和执行能力；
+                            </p>
+                            <p class="service-split-desc newservice-split-desc">
+                                7.  有会计从业资格证书，同时具备会计初级资格证者。
+                            </p>
+                            <p style="text-align: left;padding-left: 10px;color: #bb7979;">-薪资</p>
+                            <p class="service-split-desc newservice-split-desc">
+                                面议
+                            </p>
+                        </div>
+                        <a href="javascript:;" class="btn btn-primary new-downArrow">展开</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- end -->
     <footer>
 
         <!-- End Container -->
@@ -176,6 +242,22 @@
 
     <!-- 底部 -->
     <script src="js/footer.js"></script>
+
+    <script>
+        $('.new-downArrow').on('click', function(){
+            if ($(this).data('open')==1) {
+                // 现在打开状态
+                $(this).siblings('.service-box').css('height', '400px');
+                $(this).text('展开');
+                $(this).data('open',2);
+            } else {
+                $(this).siblings('.service-box').css('height', '800px');
+                $(this).siblings('.service-box').css('overflow', 'scroll');
+                $(this).text('收起');
+                $(this).data('open',1);
+            }
+        })
+    </script>
 </body>
 
 </html>
