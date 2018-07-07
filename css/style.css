@@ -1994,3 +1994,18 @@ hr.line {
     color: #fff;
     border-radius: 3px;
 }
+
+
+.owl-carousel .owl-wrapper-outer {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.owl-controls{
+    position: absolute;
+    top: -50px;
+    width: 100%;
+}
+
