@@ -1324,7 +1324,8 @@ footer .footer-bottom .scrool-to-top p a:focus {
 }
 
 .new-about{
-    background: url("../images/new/IMG_3467.JPG");
+    /* background: url("../images/new/IMG_3467.JPG"); */
+    background: url("../images/aboutUsBg.jpg");
     background-repeat: no-repeat;
     -webkit-background-size: 100% 100%;
     background-size: 100% 100%;
